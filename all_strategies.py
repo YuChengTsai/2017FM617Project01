@@ -4,6 +4,7 @@ import pandas as pd
 import talib
 from talib import MA_Type
 
+#hello world
 # 這是我們的策略的部分
 # 主要只是要算出進出的訊號 signals 跟何時持有部位 positions
 # 底下是一個突破系統的範例
@@ -350,7 +351,7 @@ def 第六組_strategy(df):
     # 當短周期均線(MA20)由下方突破長周期均線(MA60),即為[黃金交叉],買進
     # 反之;當短周期均線(MA20)由下方跌破長周期均線(MA60),即為[死亡交叉],賣出
     """
-    
+
     for t in range(3, df['signals'].size):
         if df['MA20'][t-2] < df['MA60'][t-2] and df['MA20'][t-1] > df['MA60'][t-1]:
             if not has_position:
